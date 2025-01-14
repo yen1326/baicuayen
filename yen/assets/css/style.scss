@@ -362,26 +362,14 @@ footer {
       display: flex;
       margin: 0 auto;
       height: 200px;
-      gap:55px;
-      padding-top: 20px;
-      ul{
-        width: 100%;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        text-align: left;
-        li{
-          flex-shrink: 0;
-          padding: 0px 5px;
-        }
-        a{
-            text-decoration: none;
-            color: #FFFFFF;
-            font-weight: 500;
-            &:hover{
-                opacity: 70%;
-            }
-        }
+      gap:70px;
+      .footer__d3--1 p,
+      .footer__d3--2 p,
+      .footer__d3--3 p,
+      .footer__d3--4 p,
+      .footer__d3--5 p
+      {
+        line-height: 2rem;
       }
     }
     .footer__copy{

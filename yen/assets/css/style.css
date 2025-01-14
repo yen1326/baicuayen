@@ -338,27 +338,14 @@ footer .footer__d3 {
   display: flex;
   margin: 0 auto;
   height: 200px;
-  gap: 55px;
-  padding-top: 20px;
+  gap: 70px;
 }
-footer .footer__d3 ul {
-  width: 100%;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-}
-footer .footer__d3 ul li {
-  flex-shrink: 0;
-  padding: 0px 5px;
-}
-footer .footer__d3 ul a {
-  text-decoration: none;
-  color: #FFFFFF;
-  font-weight: 500;
-}
-footer .footer__d3 ul a:hover {
-  opacity: 70%;
+footer .footer__d3 .footer__d3--1 p,
+footer .footer__d3 .footer__d3--2 p,
+footer .footer__d3 .footer__d3--3 p,
+footer .footer__d3 .footer__d3--4 p,
+footer .footer__d3 .footer__d3--5 p {
+  line-height: 2rem;
 }
 footer .footer__copy {
   text-align: center;
