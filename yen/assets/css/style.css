@@ -11,56 +11,61 @@ body {
   box-sizing: border-box;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+.page-content {
+  display: block;
+}
+
+.header {
   width: 100%;
+  padding: 32px 0px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin: 0 auto;
+  gap: 10px;
+  background-color: #FFFFFF;
+}
+.header .container {
   max-width: 1440px;
   margin: 0 auto;
-  height: 160px;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  z-index: 1;
-  padding: 32px;
-  gap: 25px;
+  width: 100%;
+  display: grid;
+  row-gap: 30px;
 }
-header .above {
+.header .above {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-header .above .logo img {
+.header .above .logo img {
   max-width: 260px;
 }
-header .above .contact1 {
+.header .above .contact1 {
   display: flex;
   align-items: center;
   gap: 10px;
   text-decoration: none;
 }
-header .above .contact1 img {
+.header .above .contact1 img {
   width: 40px;
   height: 40px;
   transform: translateY(5px);
 }
-header .above .contact1 span {
+.header .above .contact1 span {
   font-size: 3rem;
   font-weight: 700;
   color: #f67600;
 }
-header .above .contact1 p {
+.header .above .contact1 p {
   font-size: 1.1rem;
   color: #000000;
 }
-header nav {
+.header .nav {
   max-width: 1360px;
   display: inline-block;
   margin: 0 auto;
 }
-header nav .menu-list {
+.header .nav .menu-list {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -70,17 +75,16 @@ header nav .menu-list {
   margin: 0;
   padding: 0;
 }
-header nav .menu-list li {
-  flex-shrink: 0;
+.header .nav .menu-list li {
   padding: 0px 5px;
 }
-header nav .menu-list a {
+.header .nav .menu-list a {
   text-decoration: none;
   color: black;
   font-weight: bold;
   text-align: center;
 }
-header nav .menu-list a:hover {
+.header .nav .menu-list a:hover {
   opacity: 75%;
 }
 
@@ -105,27 +109,41 @@ header nav .menu-list a:hover {
   border-radius: 10px;
   flex-shrink: 0;
 }
-.main .main-item .news .title {
+.main .main-item .news .title1, .main .main-item .news .title2, .main .main-item .news .title3 {
   width: 395px;
   height: 80px;
   display: flex;
   font-size: 1.4rem;
   font-weight: 700;
   align-items: center;
-  background-image: url("../img/back1_news.png");
-  background-position: center 40px;
-  background-size: 360px 35px;
-  background-repeat: no-repeat;
 }
-.main .main-item .news .title .num {
+.main .main-item .news .title1 .num, .main .main-item .news .title2 .num, .main .main-item .news .title3 .num {
   font-family: arial;
   font-size: 4.5rem;
   font-weight: 700;
   color: #f67600;
   padding-right: 10px;
 }
-.main .main-item .news .title span {
+.main .main-item .news .title1 span, .main .main-item .news .title2 span, .main .main-item .news .title3 span {
   color: #f67600;
+}
+.main .main-item .news .title1 {
+  background-image: url("../img/back1_news.png");
+  background-size: 375px 40px;
+  background-position: 0 40px;
+  background-repeat: no-repeat;
+}
+.main .main-item .news .title2 {
+  background-image: url("../img/back2_news.png");
+  background-size: 270px 40px;
+  background-position: 0 40px;
+  background-repeat: no-repeat;
+}
+.main .main-item .news .title3 {
+  background-image: url("../img/back3_news.png");
+  background-size: 280px 40px;
+  background-position: 0 40px;
+  background-repeat: no-repeat;
 }
 .main .main-item .news .content {
   white-space: normal;
@@ -183,7 +201,6 @@ header nav .menu-list a:hover {
 
 .contact {
   width: 100%;
-  max-width: 1440px;
   height: 454px;
   position: relative;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("../img/back_cont.png");
@@ -297,7 +314,6 @@ footer {
   padding: 20px 0;
   text-align: center;
   line-height: 2rem;
-  max-width: 1440px;
   margin: 0 auto;
 }
 footer .footer-img {
@@ -334,8 +350,9 @@ footer .footer__d2 .footer__d2--item .bold {
   transform: translateY(-30px);
 }
 footer .footer__d3 {
-  width: 60%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
   height: 200px;
   gap: 55px;
@@ -366,6 +383,113 @@ footer .footer__copy {
   color: #969696;
 }
 
+.contact2 {
+  position: fixed;
+  top: 35%;
+  right: -60px;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact2 a {
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact2 .cont2-org, .contact2 .cont2-red {
+  color: #FFFFFF;
+  border-radius: 20px 0 0 20px;
+  padding: 10px;
+  gap: 5px;
+}
+.contact2 .cont2-org:hover, .contact2 .cont2-red:hover {
+  opacity: 70%;
+}
+.contact2 .cont2-org p, .contact2 .cont2-red p {
+  padding: 0 7px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: #FFE344;
+  color: #000000;
+}
 .contact2 .cont2-org {
   background-color: #f67600;
+}
+.contact2 .cont2-red {
+  background-color: #DD1D1D;
+}
+
+@media screen and (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+  .width768 {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    max-width: 768px;
+  }
+  .header {
+    gap: 0 !important;
+    max-width: 768px;
+  }
+  .contact1 {
+    display: none !important;
+  }
+  .menu-open .page-content {
+    display: none;
+  }
+  .menu-list {
+    display: none !important;
+    background-color: #FFFFFF;
+  }
+  .menu-toggle {
+    display: block;
+    font-size: 50px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+  }
+  .menu-open .menu-list {
+    display: flex !important;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    text-align: center;
+    gap: 0;
+    margin-top: 40px;
+    max-width: 768px;
+    height: 700px;
+  }
+  .menu-open .menu-list li {
+    width: 50%;
+    max-width: 384px;
+    border: 1px solid #cccccc;
+    padding: 40px 20px;
+    margin: 0 !important;
+  }
+  .menu-list a {
+    text-decoration: none;
+    color: #000;
+  }
+  .width768 {
+    display: flex;
+    gap: 40px;
+  }
+  .width768 .phone768 {
+    width: 50px;
+    height: 50px;
+  }
+  .banner {
+    max-width: 768px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -9,7 +9,9 @@
 <body>
 
     <!-- ---Header--- -->
-    <header>
+     
+    <header class="header">
+        <div class="container">
         <div class="above">
 
             <div class="logo"><img src="./assets/img/logo_header.png"></div>
@@ -20,10 +22,14 @@
                 <p>受付時間：<br>10:00~18:00（水曜日を除く）</p>        
             </a>
 
+            <div class="width768">
+            <img src="./assets/img/phone768.png" class="phone768">
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
         </div>
+        </div>
+        
         <!-- ---Menu--- -->
-    <nav>
-        <!-- <div class="hamburger" onclick="toggleMenu()">&#9776;</div> -->
+    <nav class="nav">
             <ul class="menu-list">
                 <li><a href="#">選ばれる理由</a></li>
                 <li><a href="#">初めての方へ</a></li>
@@ -36,10 +42,11 @@
                 <li><a href="#">お客様の声</a></li>
                 <li><a href="#">補助金情報</a></li>
             </ul>
-        </div>
     </nav>
+</div>
     </header>
 
+    <div class="page-content">
     <!-- ---Banner--- -->
     <section class="banner">
         <p>千葉スピード解体が選ばれる理由とは？</p>
@@ -55,7 +62,7 @@
     <section class="main-item">
         <div class="pic"><img src="./assets/img/pic1_news.png"></div>
         <div class="news">
-            <div class="title">
+            <div class="title1">
                 <div class="num">01</div>
                 <span>土地活用</span>
                 <p>までフルサポート</p>
@@ -75,7 +82,7 @@
 
     <section class="main-item">
         <div class="news">
-            <div class="title">
+            <div class="title2">
                 <div class="num">02</div>
                 <span>明瞭な</span>
                 <p>料金設定</p>
@@ -93,14 +100,14 @@
     <section class="main-item">
         <div class="pic"><img src="./assets/img/pic3_news.png"></div>
         <div class="news">
-            <div class="title">
+            <div class="title3">
                 <div class="num">03</div>
                 <span>＋α</span>
                 <p>のサービス力</p>
             </div>
             <div class="content">
                 <p>解体工事には、粉じんや泥、工事音などがつきものです。工事が始まる前から終わるまでのフォローを会社が怠ってしまうと、
-                <span>近隣の方とのトラブル</span>になり得ます。 近隣の方とのトラブルを未然に防ぐために、千葉スピード解体では担当者自身が、
+                <span>近隣の方とのトラブル</span>になり得ます。近隣の方とのトラブルを未然に防ぐために、千葉スピード解体では担当者自身が、
                 <span>事前の挨拶周り</span>や
                 <span>工期中の清掃</span>を行います。解体から始まる未来の街づくりのために、あたりまえのことをあたりまえにできることを全社員が大切にしています。
                 </p> 
@@ -202,25 +209,29 @@
     </footer>
 
     <!-- ---Contact cố định--- -->
-    <div class="contac2">
+    <div class="contact2">
         <a href="#" class="cont2-org">
             <img src="./assets/img/mail_cont.png">
             <span>お問い合わせ</span>
             <p>無料</p>
         </a>
-        <!-- <a href="#" class="cont2-red">
+        <a href="#" class="cont2-red">
             <img src="./assets/img/office_cont.png">
             <span>来店予約</span>
-        </a> -->
+            <p>無料</p>
+        </a>
     </div>
-
-    <!--  Thêm/loại bỏ class 'active' để hiển thị/ẩn menu -->
-    <!-- <script>
+</div>
+    
+    <!--  Hiển thị/ẩn menu -->
+    <script>
         function toggleMenu() {
-          const menuList = document.querySelector('.menu-list');
-          menuList.classList.toggle('active'); 
-        }
-      </script> -->
+            var body = document.body;
+            var menu = document.querySelector('.menu-list');
+            // menu.classList.toggle('grid');
+            body.classList.toggle('menu-open');
+            }
+    </script>
 </body>
 </html>
 

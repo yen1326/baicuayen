@@ -4,9 +4,12 @@
 $font-noto: "Noto Sans JP", serif;
 $font-dm: "DM Serif Text", serif;
 
+// thêm font chữ Oswald 
+
 body{
     font-family: $font-noto;
     padding-top: 160px;
+    // background-color: paleturquoise;
 }
 * {
     margin: 0;
@@ -14,29 +17,34 @@ body{
     box-sizing: border-box;
 }
 
+.page-content{
+  display: block;
+}
+
 //   ---header---
 
-header{
-    position: fixed;
+.header{
+  width: 100%;
+    padding: 32px 0px;
+    position: sticky;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    height: 160px;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    z-index: 1;
-    padding: 32px ;
-    gap:25px;
+    z-index: 1000;
+    margin: 0 auto; 
+    gap: 10px;
+    background-color: #FFFFFF;
+    .container{
+      max-width: 1440px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      row-gap: 30px;
+    }
     .above {
         display: flex;
         align-items: center;
         justify-content: space-between;
         .logo img {
-            max-width: 260px;
+          max-width: 260px;
         }
         .contact1{
             display: flex;
@@ -59,10 +67,11 @@ header{
             }
       }
     }
-    nav{
+    .nav{
         max-width: 1360px;
         display: inline-block;
         margin: 0 auto;
+       
         .menu-list{
             width: 100%;
             display: flex;
@@ -73,7 +82,6 @@ header{
             margin: 0;
             padding: 0;
             li{
-                flex-shrink: 0;
                 padding: 0px 5px;
             }
             a{
@@ -111,17 +119,13 @@ header{
       flex-shrink: 0;
     }
     .news{
-      .title{
+      .title1, .title2, .title3{
         width: 395px;
         height: 80px;
         display: flex;
         font-size: 1.4rem;
         font-weight: 700;
         align-items: center;
-        background-image: url('../img/back1_news.png');
-        background-position: center 40px;
-        background-size: 360px 35px;
-        background-repeat: no-repeat;
         .num{
           font-family: arial;
           font-size: 4.5rem;
@@ -132,6 +136,24 @@ header{
         span{
           color: #f67600;
         }
+      }
+      .title1{
+        background-image: url('../img/back1_news.png');
+        background-size: 375px 40px;
+        background-position: 0 40px;
+        background-repeat: no-repeat;
+      }
+      .title2{
+        background-image: url('../img/back2_news.png');
+        background-size: 270px 40px;
+        background-position: 0 40px;
+        background-repeat: no-repeat;
+      }
+      .title3{
+        background-image: url('../img/back3_news.png');
+        background-size: 280px 40px;
+        background-position: 0 40px;
+        background-repeat: no-repeat;
       }
       .content{
         white-space: normal;
@@ -198,7 +220,6 @@ header{
 //   ---contact---
 .contact{
   width: 100%;
-  max-width: 1440px;
   height: 454px;
   position: relative;
   background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../img/back_cont.png');
@@ -317,7 +338,6 @@ footer {
     padding: 20px 0;
     text-align: center;
     line-height: 2rem;
-    max-width: 1440px;
     margin: 0 auto;
     .footer-img {
       display: flex; 
@@ -358,8 +378,9 @@ footer {
       }
     }
     .footer__d3{
-      width: 60%;
       display: flex;
+      justify-content: center;
+      align-items: center;
       margin: 0 auto;
       height: 200px;
       gap:55px;
@@ -391,9 +412,127 @@ footer {
     }
 }
 
+
+
   // ---contact cố định---
-.contact2{
-  .cont2-org{
-    background-color: #f67600;
+  .contact2{
+    position: fixed; 
+    top: 35%;
+    right:-60px;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    a{
+      text-align: center;
+      text-decoration: none; 
+      display: flex; 
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .cont2-org, .cont2-red{
+      color:#FFFFFF;  
+      border-radius: 20px 0 0 20px; 
+      padding: 10px;
+      gap: 5px;
+      &:hover{
+        opacity: 70%;
+      }
+      p{
+        padding: 0 7px; 
+        border-radius: 20px; 
+        font-size: 10px;
+        font-weight: bold;
+        background-color: #FFE344; 
+        color:#000000;
+      }
+    }
+    .cont2-org{
+      background-color:#f67600; 
+    }
+    .cont2-red{
+      background-color:#DD1D1D; 
+    }
   }
+
+  @media screen and (min-width: 769px){
+    .menu-toggle {
+      display: none;
+    }
+    .width768{
+      display: none;
+    }
+  }
+
+  // sp màn hình 768px
+
+  @media screen and (max-width: 768px){
+    body{
+      max-width: 768px;
+    }
+    .header{
+      gap: 0 !important;
+      max-width: 768px;
+    }
+    .contact1 {
+      display: none !important;
+    }
+    .menu-open .page-content {
+      display: none;
+  }
+    .menu-list {
+      display: none !important;
+      background-color: #FFFFFF;
+    }
+    .menu-toggle {
+      display: block;
+      font-size: 50px;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+    }
+
+    .menu-open .menu-list {
+          display: flex !important;
+          flex-wrap: wrap;
+          overflow-y: auto;
+          text-align: center;
+          gap: 0;
+          margin-top: 40px;
+          max-width: 768px;
+          height: 700px;
+  
+       li {
+          width: 50%;
+          max-width: 384px;
+          border: 1px solid #cccccc;
+          padding: 40px 20px;
+          margin: 0 !important;
+      }
+    }
+  
+      .menu-list a {
+          text-decoration: none;
+          color: #000;
+      }
+  
+  
+
+  .width768{
+    display: flex;
+    gap: 40px;
+    .phone768{
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .banner{
+    max-width: 768px;
+  }
+
 }
