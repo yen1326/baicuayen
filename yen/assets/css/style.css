@@ -32,6 +32,7 @@ body {
   row-gap: 30px;
 }
 .header .above {
+  margin: 0 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -68,6 +69,7 @@ body {
   display: none;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
   width: 100%;
   max-width: 768px;
   position: relative;
@@ -509,7 +511,6 @@ footer .footer__copy {
     gap: 0 !important;
     max-width: 768px;
     width: 100%;
-    padding: 20px;
   }
   .contact1 {
     display: none !important;
@@ -546,7 +547,7 @@ footer .footer__copy {
     display: grid !important;
     grid-template-columns: 1fr 1fr;
     text-align: center;
-    gap: 0;
+    gap: 0 !important;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -557,7 +558,7 @@ footer .footer__copy {
     max-width: 384px;
     border: 1px solid #cccccc;
     box-sizing: border-box;
-    padding: 50px 40px;
+    padding: 50px 40px !important;
     margin: 0;
   }
   .menu-list a {
