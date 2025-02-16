@@ -129,7 +129,6 @@ body {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  text-align: center;
 }
 .header .nav .menu-list a:hover {
   opacity: 75%;
@@ -378,8 +377,12 @@ footer span {
   font-weight: bold;
   font-size: 1.3rem;
 }
+footer span .brf {
+  display: none;
+}
 footer .footer__d2 {
   width: 850px;
+  padding-top: 30px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -644,7 +647,7 @@ footer .footer__copy {
   }
   footer .footer__d2 .footer__d2--item .text-gr {
     display: block;
-    margin-left: -350px;
+    font-size: 2rem;
     margin-bottom: 20px;
   }
   footer .footer__d2 .footer__d2--item img {
@@ -655,12 +658,41 @@ footer .footer__copy {
   }
 }
 @media screen and (max-width: 376px) {
+  .menu-open .nav .cont768 {
+    top: 35%;
+  }
+  .menu-open .nav .cont768 .cont768__org {
+    gap: 0;
+    height: 64px;
+  }
+  .menu-open .nav .cont768 .cont768__org span {
+    font-size: 1rem;
+  }
+  .menu-open .nav .cont768 .cont768__red {
+    gap: 0;
+    height: 64px;
+  }
+  .menu-open .nav .cont768 .cont768__red span {
+    font-size: 1rem;
+  }
+  .menu-open .menu-list {
+    max-width: 375px;
+  }
+  .menu-open .menu-list li {
+    max-width: 187.5px;
+    width: 100%;
+    padding: 15px 70px !important;
+    text-align: center;
+  }
+  .menu-open .menu-list li a {
+    font-size: 0.8rem !important;
+  }
   .banner {
     height: 148px;
     line-height: 1.1rem;
   }
   .banner p {
-    font-size: 25px !important;
+    font-size: 30px !important;
     transform: translateY(-40px);
   }
   .banner span {
@@ -692,6 +724,8 @@ footer .footer__copy {
   }
   .contact .cont-d3 {
     width: 100%;
+    top: 50%;
+    transform: translate(-170px, 50px);
   }
   .contact .cont-d3 .cont-d3__org {
     width: 90%;
@@ -705,5 +739,20 @@ footer .footer__copy {
     width: 90%;
     padding: 5 10px;
     gap: 10px !important;
+  }
+  footer .footer-img img {
+    margin: 0 !important;
+    width: 240px !important;
+    height: 32px !important;
+  }
+  footer span {
+    font-size: 1.1rem !important;
+    line-height: 0.1rem;
+  }
+  footer span .brf {
+    display: block;
+  }
+  footer .footer__d2 .footer__d2--item .text-gr {
+    font-size: 1rem !important;
   }
 }/*# sourceMappingURL=style.css.map */
