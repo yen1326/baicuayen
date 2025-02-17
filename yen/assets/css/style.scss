@@ -3,20 +3,16 @@
 
 $font-noto: "Noto Sans JP", serif;
 $font-dm: "DM Serif Text", serif;
-
-// thêm font chữ Oswald 
+ 
 
 body{
     font-family: $font-noto;
-    // padding-top: 160px;
-    // background-color: paleturquoise;
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 .page-content{
   display: block;
 }
@@ -75,9 +71,8 @@ body{
           display: none;
           width: 90%;
           position:relative;
-          top:25%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+          margin: auto;
+          padding-top: 50px;
           .cont768__org{
             width: 100%;
             display: flex;
@@ -247,6 +242,7 @@ body{
   color: orange;
   font-size: 25px;
   font-weight: 600;
+  font-family: oswald;
   }
 }
 
@@ -271,16 +267,12 @@ body{
 
 //   ---contact---
 .contact{
-  padding: 200px 0;
-  position: relative;
+  padding: 60px 0;
+  gap: 40px;
   background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../img/back_cont.png');
   .cont-d1{
     display: flex;
-    align-items: center;
-    position: absolute;
-    top:25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    justify-content: center;
     gap: 10px;
     .group-1, .group-2 {
       display: flex;
@@ -307,10 +299,7 @@ body{
   .cont-d2{
     display: flex;
     align-items: center;
-    position: absolute;
-    top:47%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    justify-content: center;
     gap: 10px;
     color: #FFFFFF;
     text-decoration: none;
@@ -324,10 +313,8 @@ body{
 }
   .cont-d3{ 
     display: flex;
-    position: absolute;
-    top:75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    justify-content: center;
+    padding-top: 10px;
     gap: 20px;
     .cont-d3__org{
       width: 453px;
@@ -466,8 +453,6 @@ footer {
     }
 }
 
-
-
   // ---contact cố định---
   .contact2{
     position: fixed; 
@@ -581,10 +566,23 @@ footer {
       display: block !important;
       transform-origin: top left;
       padding-bottom: 40px ;
+      animation: slideDown 0.5s ease-out;
     }
     .menu-open .page-content {
       display: none;
   }
+
+  @keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
   .menu-list {
         display: none !important;
         background-color: #FFFFFF;     
@@ -592,6 +590,7 @@ footer {
   .menu-open .menu-list {
         display: grid !important;
         grid-template-columns: 1fr 1fr;
+        animation: slideDown 0.5s ease-out;
         text-align: center;
         gap: 0 !important;
         margin: 0;
@@ -647,11 +646,9 @@ footer {
   }
   .contact{
     flex-direction: column;
-    padding: 300px 0;
     .cont-d1 {
       flex-direction: column;
       align-items: center;
-      padding: 60px 0;
       .group-1, .group-2 {
         justify-content: center;
         width: 700px;
@@ -661,6 +658,7 @@ footer {
       display: block;
       width: 700px;
       align-items: center;
+      margin: auto;
       text-align: center;
       flex-wrap: wrap;
     p{
@@ -672,7 +670,15 @@ footer {
     }
     .cont-d3{
       flex-direction: column;
-      
+      margin: auto;
+      .cont-d3__org{
+        margin: auto;
+        width: 90%;
+      }
+      .cont-d3__red{
+        margin: auto;
+        width: 90%;
+      }
     }
   }
   footer{
@@ -704,9 +710,10 @@ footer {
 }
 
 
+  // sp màn hình 375px
+
 @media screen and (max-width: 376px){
   .menu-open .nav .cont768{
-    top: 35%;
     .cont768__org{
       gap: 0;
       height: 64px;
@@ -758,7 +765,7 @@ footer {
 }
 .contact{
   .cont-d1{
-    width: 100%;
+    
     .group-1{ 
       input{
         font-size: 1.2rem !important;
@@ -767,7 +774,12 @@ footer {
     }
   }
   .cont-d2{
-    transform:translate(-350px, -50px);
+    transform: translateX(-170px);
+    img{
+      width: 40px;
+      height: 40px;
+      transform: translateY(5px);
+    }
     .num{
       font-size:2.5rem;
     }
@@ -776,9 +788,6 @@ footer {
     }
   }
   .cont-d3{
-    width: 100%;
-    top: 50%;
-    transform: translate(-170px,50px);
     .cont-d3__org{
       width: 90%;
       padding: 5 10px;
