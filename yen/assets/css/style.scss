@@ -514,10 +514,6 @@ footer {
   // sp màn hình 768px
 
   @media screen and (max-width: 768px){
-    body{
-      max-width: 768px;
-      width: 100%;
-    }
     .header{
       gap: 0 !important;
       max-width: 768px;
@@ -557,7 +553,7 @@ footer {
       }
     }
     .link{
-      padding-left: 20px;
+      padding-left: 40px;
     }
     .contact2{
       display: none;
@@ -627,6 +623,7 @@ footer {
         }
       }
       .news{ 
+        width: 100%;
         flex-direction: column;
         gap: 0;
         .title1, .title2, .title3{
