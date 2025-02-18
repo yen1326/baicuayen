@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
 
 $font-noto: "Noto Sans JP", serif;
 $font-dm: "DM Serif Text", serif;
+$font-os: "Oswald", sans-serif;
 
 body{
     font-family: $font-noto;
@@ -168,7 +170,7 @@ body{
     color: orange;
     font-size: 25px;
     font-weight: 600;
-    font-family: oswald;
+    font-family: $font-os;
     }
   }
 
@@ -249,10 +251,10 @@ body{
                     position: absolute;
                     top: 35%;
                     left: 50%;
-                    transform: translate(-50%, -35%);
+                    transform: translate(-50%, -45%);
                     font-size: 28px;
                     font-weight: 800;
-                    font-family: oswald;
+                    font-family: $font-os;
                 }
             }
             .text{
@@ -294,6 +296,130 @@ body{
           font-size: 16px;
         }
       }
+    }
+    .s4{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      gap: 40px;
+      .item{
+        border: 4px solid #F67600;
+        border-radius: 16px;
+      .s4__title{
+        padding: 16px 48px;
+        background-color: #F67600;
+        border-radius: 10px 10px 0 0;
+        border: 4px solid #F67600;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        text-align: center;
+        align-items: center;
+        color: #FFFFFF;
+        .icon {  
+          position: relative;  
+          transform: translateY(-20px);
+        .num{
+          font-family: $font-os;
+          font-size: 32px;
+          //position: absolute;
+          font-weight: 500;
+          transform: translateY(50px);
+          color: #F67600;
+        }
+      }
+        .text_gr{
+          span{
+            font-size: 16px;
+            font-weight: 700;
+          }
+          p{
+            font-size: 32px;
+            font-weight: 700;
+          }
+        }
+      }
+      .s4__content{
+        display: flex;
+        flex-direction: column;
+        padding: 48px;
+        gap: 32px;
+        .content{
+          display: flex;
+          gap: 40px;
+          .group{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            .logo{
+              display: flex;
+              gap: 24px;
+              align-items: center;
+              .gr_title1{
+                .above_txt{
+                  display: flex;
+                  align-items: baseline;
+                  font-size: 20px;
+                  font-weight: 700;
+                  p{
+                    font-size: 36px;
+                    font-weight: 700;
+                    position: relative;
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      left: 0;
+                      bottom: 3px;
+                      width: 100%;
+                      height: 12px;
+                      background-color: #FFDD55;
+                      z-index: -1; 
+                    }
+                  }
+                }
+                span{
+                  color: #606060;
+                  font-size: 13px;
+                  font-weight: 400;
+                }
+              }
+            }
+            .gr_txt{
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 24px;
+              span{
+                color: #F67600;
+              }
+            }
+          }
+          .pic img{
+            width: 393px;
+            height: 262px;
+          }
+        }
+        .btn{
+          display: flex;
+          display: inline-flex;
+          margin: auto;
+          justify-content: center;
+          text-decoration: none;
+          gap: 8px;
+          border: 1px solid #000000;
+          border-radius: 99px;
+          padding: 24px 64px 24px 48px;
+          .txt{
+            font-size: 18px;
+            font-weight: 700;
+            color: #000;
+          }
+          .next0{
+            visibility: hidden;
+          }
+        }
+      }
+    }
     }
 }
 
@@ -422,7 +548,7 @@ footer {
     }
     span{
         color: #f67600;
-        font-family: Oswald;
+        font-family: $font-os;
         font-weight: bold; 
         font-size: 1.3rem;
         .brf{
@@ -654,7 +780,7 @@ footer {
         }
       }
     }
-  }
+
   .contact{
     flex-direction: column;
     .cont-d1 {
@@ -716,5 +842,6 @@ footer {
     }
     .footer__d3{
     display: none;
+  }
   }
   }
