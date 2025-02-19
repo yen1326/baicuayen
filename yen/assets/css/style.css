@@ -612,11 +612,9 @@ footer .footer__copy {
   }
   .contact .cont-d1 .group-1, .contact .cont-d1 .group-2 {
     justify-content: center;
-    width: 700px;
   }
   .contact .cont-d2 {
     display: block;
-    width: 700px;
     align-items: center;
     margin: auto;
     text-align: center;
@@ -711,12 +709,12 @@ footer .footer__copy {
   .main .pic768 {
     width: 90%;
   }
+  .main .main-item .news .title1, .main .main-item .news .title2, .main .main-item .news .title3 {
+    width: 375px;
+  }
   .contact .cont-d1 .group-1 input {
     font-size: 1.2rem !important;
     padding: 5px 10px !important;
-  }
-  .contact .cont-d2 {
-    transform: translateX(-170px);
   }
   .contact .cont-d2 img {
     width: 40px;

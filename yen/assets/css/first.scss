@@ -463,10 +463,7 @@ body{
               }
             }
           }
-          .pic img{
-            width: 393px;
-            height: 262px;
-          }
+          
         }
         .btn{
           display: flex;
@@ -911,7 +908,6 @@ footer {
       align-items: center;
       .group-1, .group-2 {
         justify-content: center;
-        width: 700px;
     }
     }
     .cont-d2{
@@ -1023,8 +1019,7 @@ footer {
 //   }
 //  }
 .contact{
-  .cont-d1{
-    
+  .cont-d1{ 
     .group-1{ 
       input{
         font-size: 1.2rem !important;
@@ -1033,7 +1028,7 @@ footer {
     }
   }
   .cont-d2{
-    transform: translateX(-170px);
+
     img{
       width: 40px;
       height: 40px;

@@ -648,12 +648,12 @@ footer {
       align-items: center;
       .group-1, .group-2 {
         justify-content: center;
-        width: 700px;
+
     }
     }
     .cont-d2{
       display: block;
-      width: 700px;
+
       align-items: center;
       margin: auto;
       text-align: center;
@@ -759,6 +759,13 @@ footer {
   .pic768{
     width: 90%;
   }
+  .main-item{
+    .news{
+      .title1, .title2, .title3{
+        width: 375px;
+      }
+    }
+  }
 }
 .contact{
   .cont-d1{
@@ -771,7 +778,7 @@ footer {
     }
   }
   .cont-d2{
-    transform: translateX(-170px);
+
     img{
       width: 40px;
       height: 40px;

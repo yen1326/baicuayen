@@ -450,10 +450,6 @@ body {
 .main .s4 .item .s4__content .content .group .gr_txt span {
   color: #F67600;
 }
-.main .s4 .item .s4__content .content .pic img {
-  width: 393px;
-  height: 262px;
-}
 .main .s4 .item .s4__content .btn {
   display: flex;
   display: inline-flex;
@@ -870,7 +866,6 @@ footer .footer__copy {
   }
   .contact .cont-d1 .group-1, .contact .cont-d1 .group-2 {
     justify-content: center;
-    width: 700px;
   }
   .contact .cont-d2 {
     display: block;
@@ -965,9 +960,6 @@ footer .footer__copy {
   .contact .cont-d1 .group-1 input {
     font-size: 1.2rem !important;
     padding: 5px 10px !important;
-  }
-  .contact .cont-d2 {
-    transform: translateX(-170px);
   }
   .contact .cont-d2 img {
     width: 40px;
