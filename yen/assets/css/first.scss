@@ -279,12 +279,19 @@ body{
       .center{
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: 24px;
         .title{
           font-weight: 700;
           font-size: 32px;
+          .pic768_none{
+            display: none;
+          }
+          .gr{
+          display: inline-block;
           span{
             color: #F67600;
+          }
           }
         }
         .text1{
@@ -320,15 +327,15 @@ body{
         .icon {  
           position: relative;  
           transform: translateY(-20px);
-        .num{
-          font-family: $font-os;
-          font-size: 32px;
-          //position: absolute;
-          font-weight: 500;
-          transform: translateY(50px);
-          color: #F67600;
+          .num{
+            font-family: $font-os;
+            font-size: 32px;
+            //position: absolute;
+            font-weight: 500;
+            transform: translateY(50px);
+            color: #F67600;
+          }
         }
-      }
         .text_gr{
           span{
             font-size: 16px;
@@ -383,6 +390,68 @@ body{
                   font-size: 13px;
                   font-weight: 400;
                 }
+              }
+              .gr_title2{
+                display: flex;
+                flex-wrap: wrap;
+                row-gap: 0.8rem;
+                column-gap: 2.4rem;   
+                p{
+                  font-size: 20px;
+                  font-weight: 700;
+                  display: flex;
+                  position: relative;
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 3px;
+                    width: 100%;
+                    height: 12px;
+                    background-color: #FFDD55;
+                    z-index: -1; 
+                  }
+                  &:first-of-type{
+                    margin-right: 60px;
+                  }
+                  span{
+                    display: flex;
+                    transform: translateY(-7px);
+                    color: #F67600;
+                  }
+                }
+              }
+              .gr_title3{
+                display: flex;
+                gap: 24px;
+                span{
+                  font-size: 15px;
+                  font-weight: 700;
+                  color: #F67600;
+                }
+                p{
+                  font-size: 20px;
+                  font-weight: 700;
+                  display: flex;
+                  position: relative;
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 3px;
+                    width: 100%;
+                    height: 12px;
+                    background-color: #FFDD55;
+                    z-index: -1; 
+                  }
+                  span{
+                    display: flex;
+                    font-size: 20px;
+                    font-weight: 700;
+                    transform: translateY(-7px);
+                    color: #F67600;
+                  }
+              }
               }
             }
             .gr_txt{
@@ -763,7 +832,7 @@ footer {
         width: 90%;
         margin: auto;
         p{
-          font-size: 1.5rem;
+          font-size: 15px;
         }
         span{
           display: none;
@@ -777,6 +846,60 @@ footer {
         gap: 20px;
         .card{
           transform: scale(0.9);
+        }
+      }
+      .s3{
+        width: 50%;
+        transform: scale(1.5);
+        margin-top: 88px;
+        margin-bottom: 88px;
+        .left{
+          display: none;
+        }
+        .right{
+          display: none;
+        }
+        .center{
+          .title{
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            .pic768_none{
+              display: block;
+            }
+            .gr p span{
+              display: block;
+            }
+          }
+        }
+      }
+      .s4{
+        width: 90%;
+        .item{
+          .s4__content{
+            padding: 20px 24px 32px 24px ;
+            .content{
+              display: flex;
+              flex-direction: column;
+              margin: auto;
+              .group{
+                .logo{
+                  margin: auto;
+                  img{
+                    width: 94px;
+                    height: 94px;
+                  }
+                }
+              }
+              .pic{
+                display: flex;
+                justify-content: center;
+                img{
+                  width: 100%;
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -845,3 +968,117 @@ footer {
   }
   }
   }
+
+    // sp màn hình 375px
+
+@media screen and (max-width: 376px){
+  .menu-open .nav .cont768{
+    .cont768__org{
+      gap: 0;
+      height: 64px;
+      span{
+        font-size: 1rem;
+      }
+    }
+    .cont768__red{
+      gap: 0;
+      height: 64px;
+      span{
+        font-size: 1rem;
+      }
+    }
+  }
+  .menu-open .menu-list{
+    max-width: 375px;
+    li{
+
+      max-width: 187.5px;
+      width: 100%;
+      padding: 15px 70px !important;
+      text-align: center;
+      a{
+        font-size: 0.8rem !important;
+      }
+    }
+  }
+.banner{
+  height: 148px;
+  line-height: 1.1rem;
+  p{
+    font-size: 30px !important;
+    transform:translateY(-40px);
+  }
+  span{
+
+    transform:translateY(-40px);
+    font-weight: 400 !important;
+  }
+
+}
+//  .main{
+//   .s1{
+//     p{
+//       font-size: 15px;
+//     }
+//   }
+//  }
+.contact{
+  .cont-d1{
+    
+    .group-1{ 
+      input{
+        font-size: 1.2rem !important;
+        padding: 5px 10px !important;
+      }
+    }
+  }
+  .cont-d2{
+    transform: translateX(-170px);
+    img{
+      width: 40px;
+      height: 40px;
+      transform: translateY(5px);
+    }
+    .num{
+      font-size:2.5rem;
+    }
+    p{
+      font-size: 0.7rem;
+    }
+  }
+  .cont-d3{
+    .cont-d3__org{
+      width: 90%;
+      padding: 5 10px;
+      gap: 10px !important;
+      span{
+        font-size: 1rem;
+      }
+    }
+    .cont-d3__red{
+      width: 90%;
+      padding: 5 10px;
+      gap: 10px !important;
+    }
+  }
+}
+footer{
+  .footer-img img{
+    margin: 0 !important;
+    width: 240px !important;
+    height: 32px !important;
+  }
+  span{
+    font-size: 1.1rem !important;
+    line-height: 0.1rem;
+    .brf{
+      display: block;
+    }
+  }
+  .footer__d2 .footer__d2--item .text-gr{
+    // margin-bottom: 5px;
+    // margin-left: 350px;
+    font-size: 1rem !important;
+  }
+}
+}
