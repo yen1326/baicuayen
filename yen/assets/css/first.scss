@@ -840,9 +840,11 @@ footer {
         margin: auto;
         display: grid;
         grid-template-columns: repeat(2, minmax(20rem, 1fr));
-        gap: 20px;
+        column-gap: 20px;
+        row-gap: 20px;
         .card{
           transform: scale(0.9);
+          width: 100%;
         }
       }
       .s3{
@@ -881,7 +883,9 @@ footer {
               margin: auto;
               .group{
                 .logo{
-                  margin: auto;
+                  .gr_title2 p:first-of-type {
+                    margin-right: 125px;
+                  }
                   img{
                     width: 94px;
                     height: 94px;
@@ -912,7 +916,6 @@ footer {
     }
     .cont-d2{
       display: block;
-      width: 700px;
       align-items: center;
       margin: auto;
       text-align: center;
@@ -1011,13 +1014,113 @@ footer {
   }
 
 }
-//  .main{
-//   .s1{
-//     p{
-//       font-size: 15px;
-//     }
-//   }
-//  }
+ .main{
+  gap: 48px;
+  .s2{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(1.2rem, 1fr));
+    .card{
+      width: 100%;
+      padding: 32px 16px 16px 16px;
+      .num{
+        margin-top: 20px;
+        span{
+          font-size: 16.5px;
+        }
+        img{
+          width: 34px;
+        }
+      }
+      .text{
+        font-size: 14px !important;
+      }
+      .pic img{
+        width: 106px;
+      }
+    }
+ }
+ .s3{
+  .center{
+    .text1, .text2{
+      font-size: 9px ;
+    }
+    .title{
+      transform: scale(1.2);
+      width: 100%;
+      font-size: 10px;
+      align-items: center;      
+    }
+  }
+ }
+ .s4{
+  .item{
+    .s4__title{
+      padding: 0;
+      .text_gr{
+        text-align: left;
+        span{
+          font-size: 13px !important;
+        }
+        p{
+          font-size: 24px !important;
+        }
+      }
+    }
+    .s4__content{
+      padding: 20px 21px 32px 21px;
+      gap: 24px;
+      .content{
+        gap: 20px;
+        .group{
+          gap: 20px;
+          .logo{
+            gap: 12px !important;
+            .gr_title1{
+              span{
+                font-size: 10px !important;
+              }
+              .above_txt{
+                display: flex;
+                flex-direction: column;
+                font-size: 15px !important;
+                p{
+                  font-size: 24px !important;
+                }
+              }
+            }
+            .gr_title2{
+              p:first-of-type{
+                margin-right: 0 !important;
+              }
+              p{
+                font-size: 15px;
+              }
+            }
+            .gr_title3{
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+              span{
+                font-size: 12px;
+              }
+              p{
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+      .btn{
+        padding: 15px 20px 15px 0px;
+        .txt{
+          font-size: 13px !important;
+        }
+      }
+    }
+  }
+ }
+}
 .contact{
   .cont-d1{ 
     .group-1{ 

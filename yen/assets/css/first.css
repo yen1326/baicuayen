@@ -804,10 +804,13 @@ footer .footer__copy {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2, minmax(20rem, 1fr));
-    gap: 20px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    row-gap: 20px;
   }
   .main .s2 .card {
     transform: scale(0.9);
+    width: 100%;
   }
   .main .s3 {
     width: 50%;
@@ -843,8 +846,8 @@ footer .footer__copy {
     flex-direction: column;
     margin: auto;
   }
-  .main .s4 .item .s4__content .content .group .logo {
-    margin: auto;
+  .main .s4 .item .s4__content .content .group .logo .gr_title2 p:first-of-type {
+    margin-right: 125px;
   }
   .main .s4 .item .s4__content .content .group .logo img {
     width: 94px;
@@ -869,7 +872,6 @@ footer .footer__copy {
   }
   .contact .cont-d2 {
     display: block;
-    width: 700px;
     align-items: center;
     margin: auto;
     text-align: center;
@@ -956,6 +958,101 @@ footer .footer__copy {
   .banner span {
     transform: translateY(-40px);
     font-weight: 400 !important;
+  }
+  .main {
+    gap: 48px;
+  }
+  .main .s2 {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(1.2rem, 1fr));
+  }
+  .main .s2 .card {
+    width: 100%;
+    padding: 32px 16px 16px 16px;
+  }
+  .main .s2 .card .num {
+    margin-top: 20px;
+  }
+  .main .s2 .card .num span {
+    font-size: 16.5px;
+  }
+  .main .s2 .card .num img {
+    width: 34px;
+  }
+  .main .s2 .card .text {
+    font-size: 14px !important;
+  }
+  .main .s2 .card .pic img {
+    width: 106px;
+  }
+  .main .s3 .center .text1, .main .s3 .center .text2 {
+    font-size: 9px;
+  }
+  .main .s3 .center .title {
+    transform: scale(1.2);
+    width: 100%;
+    font-size: 10px;
+    align-items: center;
+  }
+  .main .s4 .item .s4__title {
+    padding: 0;
+  }
+  .main .s4 .item .s4__title .text_gr {
+    text-align: left;
+  }
+  .main .s4 .item .s4__title .text_gr span {
+    font-size: 13px !important;
+  }
+  .main .s4 .item .s4__title .text_gr p {
+    font-size: 24px !important;
+  }
+  .main .s4 .item .s4__content {
+    padding: 20px 21px 32px 21px;
+    gap: 24px;
+  }
+  .main .s4 .item .s4__content .content {
+    gap: 20px;
+  }
+  .main .s4 .item .s4__content .content .group {
+    gap: 20px;
+  }
+  .main .s4 .item .s4__content .content .group .logo {
+    gap: 12px !important;
+  }
+  .main .s4 .item .s4__content .content .group .logo .gr_title1 span {
+    font-size: 10px !important;
+  }
+  .main .s4 .item .s4__content .content .group .logo .gr_title1 .above_txt {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px !important;
+  }
+  .main .s4 .item .s4__content .content .group .logo .gr_title1 .above_txt p {
+    font-size: 24px !important;
+  }
+  .main .s4 .item .s4__content .content .group .logo .gr_title2 p:first-of-type {
+    margin-right: 0 !important;
+  }
+  .main .s4 .item .s4__content .content .group .logo .gr_title2 p {
+    font-size: 15px;
+  }
+  .main .s4 .item .s4__content .content .group .logo .gr_title3 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .main .s4 .item .s4__content .content .group .logo .gr_title3 span {
+    font-size: 12px;
+  }
+  .main .s4 .item .s4__content .content .group .logo .gr_title3 p {
+    font-size: 15px;
+  }
+  .main .s4 .item .s4__content .btn {
+    padding: 15px 20px 15px 0px;
+  }
+  .main .s4 .item .s4__content .btn .txt {
+    font-size: 13px !important;
   }
   .contact .cont-d1 .group-1 input {
     font-size: 1.2rem !important;
