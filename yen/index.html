@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REASON</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
 
@@ -244,23 +245,8 @@
     </div>
 </div>
     
-    <!--  Hiển thị/ẩn menu -->
-    <script>
-        function toggleMenu() {
-    var body = document.body;
-    var menu = document.querySelector('.menu-list');
-    var menuToggle = document.querySelector('.menu-toggle');
-
-    body.classList.toggle('menu-open');
-
-    if (body.classList.contains('menu-open')) {
-        menuToggle.innerHTML = "✖";
-    } else {
-        menuToggle.innerHTML = "&#9776;";
-    }
-}
-
-    </script>
+    <!-- ---JS--- -->
+    <script src="./assets/js/openmenu.js"></script>
 </body>
 </html>
 
