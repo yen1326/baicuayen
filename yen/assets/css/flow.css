@@ -76,9 +76,6 @@
   transition: transform 0.3s;
   margin-left: auto;
 }
-.main .s2 .item .title.hide .title::after {
-  transform: rotate(45deg);
-}
 .main .s2 .item .group {
   display: flex;
   padding: 48px;
@@ -138,24 +135,53 @@
   padding: 0 !important;
   border-width: 0 !important;
 }
+.main .s2 .item.hide .title::after {
+  transform: rotate(45deg);
+}
 
 @media screen and (max-width: 768px) {
   .main {
     width: 90%;
   }
-  .main .item .group {
+  .main .s1 p {
+    font-size: 24px;
+  }
+  .main .s1 .s1_br {
+    display: block !important;
+  }
+  .main .s1 span {
+    font-size: 48px;
+  }
+  .main .s1 span::after {
+    transform: translateX(90%);
+  }
+  .main .s2 .item .title {
+    display: flex !important;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  .main .s2 .item .title p {
+    font-size: 16px;
+  }
+  .main .s2 .item .title p span {
+    font-size: 28px;
+  }
+  .main .s2 .item .group {
     display: flex;
     flex-direction: column;
     gap: 20px !important;
     padding: 20px 24px 32px 24px !important;
   }
-  .main .item .group .gr_txt .btn {
+  .main .s2 .item .group .gr_txt .txt1 {
+    font-size: 16px;
+  }
+  .main .s2 .item .group .gr_txt .btn {
     display: none !important;
   }
-  .main .item .group .pic img {
+  .main .s2 .item .group .pic img {
     width: 100%;
   }
-  .main .item .group .btn_none {
+  .main .s2 .item .group .btn_none {
     display: flex !important;
     margin: 0 auto;
   }
