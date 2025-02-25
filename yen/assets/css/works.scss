@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
+
+$font-noto: "Noto Sans JP", serif;
+$font-dm: "DM Serif Text", serif;
+$font-os: "Oswald", serif;
+
+.main{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    margin-bottom: 120px;
+    .s2{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        .s2_title{
+            text-align: center;
+            p{
+                position: relative;
+                color: #F67600;
+                padding-bottom: 16px;
+                font-size: 32px;
+                font-weight: 700;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 4rem;
+                    height: 0.2rem;
+                    background-color: #F67600;
+                    top: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+        .s2_content{
+            display: flex;
+            gap: 40px;
+            .pic{
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                .pic_img{
+                    width: 479px;
+                    height: 320px;
+                    border-radius: 16px;
+                    background-color: #D9D9D9;
+                }
+            }
+            .txt{
+                
+            }
+        }
+    }
+    .s3{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        border-radius: 24px ;
+        background-color: #FEF8E9;
+        padding: 80px 0;
+        gap: 40px;
+        .s3_title{
+            text-align: center;
+            p{
+                position: relative;
+                color: #F67600;
+                padding-bottom: 16px;
+                font-size: 32px;
+                font-weight: 700;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 4rem;
+                    height: 0.2rem;
+                    background-color: #F67600;
+                    top: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+        .s3_content{
+            width: 90%;
+            display: flex;
+            margin: 0 auto;
+            flex-direction: column;
+            gap: 24px;
+            .item{
+                display: flex;
+                margin: 0 auto;
+                align-items: center;
+                gap: 32px;
+                .pic{
+                    width: 300px;
+                    height: 200px;
+                    border-radius: 16px;
+                    background-color: #D9D9D9;
+                }
+                .gr_txt{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    .txt1{
+                        display: flex;
+                        align-items: center;
+                        color: #777777;
+                        gap: 16px;
+                        a{
+                            text-decoration: none;
+                            color: #F67600;
+                            border: 1px solid #F67600;
+                            border-radius: 48px;
+                            font-size: 11px;
+                            font-weight: 500;
+                            padding: 6px 12px;
+                        }
+                    }
+                    .txt2{
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: #F67600;
+                    }
+                }
+            }
+        }
+        .s3_btn{
+            width: var(--s3_btn-width, 20rem);
+            display: inline-flex;
+            white-space: nowrap;
+            justify-content: center;
+            text-decoration: none;
+            background-color: #FFFFFF;
+            margin: 0 auto;
+            gap: 8px;
+            border: 1px solid #000000;
+            border-radius: 99px;
+            padding: 24px 64px 24px 58px;
+            gap: 8px;
+            .txt{
+                font-size: 15px;
+                font-weight: 700;
+                color: #000;
+            }
+        }
+    }
+}

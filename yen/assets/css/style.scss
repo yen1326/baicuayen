@@ -68,6 +68,7 @@ body{
         max-width: 1360px;
         display: inline-block;
         margin: 0 auto;
+        width: 100%;
         .cont768{ 
           display: none;
           width: 90%;
@@ -136,6 +137,7 @@ body{
             a{
                 text-decoration: none;
                 color: black;
+                //padding: 30px 100px;
                 font-weight: bold;
                 &:hover{
                     opacity: 75%;
@@ -163,14 +165,14 @@ body{
   padding: 80px 0;
   p {
   color: #FFFFFF;
-  font-size: 50px;
-  font-weight: bold;
+  font-size: 48px;
+  font-weight: 700;
   padding-bottom: 20px;
   }
   span {
   color: #F67600;
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 500;
   font-family: $font-os;
   }
 }
@@ -523,18 +525,19 @@ footer {
         width: 100%;
         max-width: 768px;
         li {
-            width: 100%;
-            max-width: 384px;
+            //width: 100%;
+            //max-width: 384px;
             border: 1px solid #cccccc;
-            box-sizing: border-box;
-            padding: 30px 130px !important;
+            //box-sizing: border-box;
+            padding: 20px 0px !important;
             white-space: nowrap;
-            margin: 0;
+            //margin: 0;
         }
   }
   .menu-list a {
             text-decoration: none;
             color: #000;
+            padding: 20px 100px ;
   } 
   
   .contact{
