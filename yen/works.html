@@ -75,8 +75,39 @@
     <!-- --Nội dung trang--- -->
     <div class="main">
         <section class="s1">
-
-        </section>
+            <div class="tab">
+                <button class="tablinks active" onclick="openTab(event, 'tab1')">
+                    <img src="icon1.png" alt="Icon 1"> 施エ内容から選ぶ
+                </button>
+                <button class="tablinks" onclick="openTab(event, 'tab2')">
+                    <img src="icon2.png" alt="Icon 2"> 施エ地域から選ぶ
+                </button>
+            </div>
+        
+            <div id="tab1" class="tabcontent" style="display: block;">
+                <button class="btn active" onclick="filterItems('all')">すべて</button>
+                <button class="btn" onclick="filterItems('木造解体')">木造解体</button>
+                <button class="btn" onclick="filterItems('鉄骨解体')">鉄骨解体</button>
+                <button class="btn" onclick="filterItems('RC解体')">RC解体</button>
+                <button class="btn" onclick="filterItems('内装解体')">内装解体</button>
+                <button class="btn" onclick="filterItems('プチ解体')">プチ解体</button>
+                <button class="btn" onclick="filterItems('その他工事')">その他工事</button>
+            </div>
+        
+            <div class="items">
+                <div class="item" data-category="木造解体">Item 1 - 木造解体</div>
+                <div class="item" data-category="鉄骨解体">Item 2 - 鉄骨解体</div>
+                <div class="item" data-category="RC解体">Item 3 - RC解体</div>
+                <div class="item" data-category="内装解体">Item 4 - 内装解体</div>
+                <div class="item" data-category="プチ解体">Item 5 - プチ解体</div>
+                <div class="item" data-category="その他工事">Item 6 - その他工事</div>
+                <div class="item" data-category="木造解体">Item 7 - 木造解体</div>
+            </div>
+        
+            <div id="tab2" class="tabcontent">
+                <p>施工地域に関する情報がここに表示されます。</p>
+            </div>
+        </section>        
 
         <section class="s2">
             <div class="s2_title"><p>代表メッセージ</p></div>
@@ -260,7 +291,7 @@
 
     <!-- ---JS--- -->
     <script src="./assets/js/openmenu.js"></script>
-
+    <script src="./assets/js/TabWorks.js"></script>
 </body>
 </html>
 
