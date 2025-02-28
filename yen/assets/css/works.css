@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap");
@@ -22,25 +23,50 @@
   border-bottom: 8px solid #F67600;
 }
 .main .s1 .tab button {
+  display: flex;
+  width: 100%;
   height: 80px;
-  background-color: #ECECEC;
-  border: 1px solid #ECECEC;
+  border: none;
   border-radius: 20px 20px 0 0;
+  justify-content: center;
   padding: 20px 16px;
   outline: none;
   font-size: 20px;
+  align-items: center;
   font-weight: 600;
-  padding: 12px 20px;
   cursor: pointer;
-  font-size: 16px;
   transition: 0.5s;
+}
+.main .s1 .tab button img {
+  color: #F67600;
+}
+.main .s1 .tab button::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin-left: auto;
+}
+.main .s1 .tab button::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #F67600;
+  border-bottom: 2px solid #F67600;
+  display: inline-block;
+  transform: rotate(45deg);
+  transition: transform 0.3s;
+  margin-left: auto;
 }
 .main .s1 .tab button:hover {
   opacity: 1;
 }
 .main .s1 .tab button.active {
   background-color: #F67600;
-  color: white;
+  color: #FFFFFF;
+}
+.main .s1 .tab button.active::after {
+  border-right: 2px solid #FFFFFF; /* Khi active, đổi màu thành trắng */
+  border-bottom: 2px solid #FFFFFF;
 }
 .main .s1 .tabcontent {
   display: none;
@@ -48,14 +74,61 @@
 .main .s1 .tabcontent .btn {
   border-radius: 99px;
   border: 1px solid #CCCCCC;
-  padding: 12px 16px;
+  padding: 8px 16px;
   cursor: pointer;
   margin: 24px 6px;
   transition: 0.5s;
 }
+.main .s1 .tabcontent .btn::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid #F67600;
+  border-bottom: 2px solid #F67600;
+  display: inline-block;
+  transform: rotate(-45deg);
+  transition: transform 0.3s;
+  margin-left: 10px;
+}
 .main .s1 .tabcontent .btn.active {
   background-color: #606060;
   color: white;
+}
+.main .s1 .tabcontent .btn.active::after {
+  display: none;
+}
+.main .s1 .items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.main .s1 .items .item {
+  border-radius: 16px;
+  background-color: #FEF8E9;
+}
+.main .s1 .items .item:hover {
+  opacity: 1;
+}
+.main .s1 .items .pic img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px 16px 0 0;
+}
+.main .s1 .items .txt {
+  padding: 16px 20px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.main .s1 .items .t1 {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #F67600;
+}
+.main .s1 .items .t2 {
+  font-size: 13px;
+  font-weight: 400;
 }
 .main .s2 {
   max-width: 1120px;
@@ -195,4 +268,37 @@
   font-size: 15px;
   font-weight: 700;
   color: #000;
+}
+@media screen and (max-width: 768px) {
+  .main {
+    gap: 48px;
+    width: 90%;
+  }
+  .main .s1 .tabcontent .btn {
+    margin: 20px 4px;
+  }
+  .main .s1 .tabcontent .btn:last-child {
+    margin-top: 0;
+  }
+  .main .s1 .items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 12px;
+  }
+  .main .s1 .items .item .txt .t1 {
+    text-align: left;
+  }
+  .main .s2 {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .main .s2 .s2_content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .main .s2 .s2_content .pic .pic_img {
+    width: 100%;
+  }
 }/*# sourceMappingURL=works.css.map */
