@@ -290,7 +290,86 @@ $font-os: "Oswald", serif;
         }
     }
     .s4{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .s4_title{
+            text-align: center;
+            p{
+                position: relative;
+                color: #F67600;
+                padding-bottom: 16px;
+                font-size: 32px;
+                font-weight: 700;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 4rem;
+                    height: 0.2rem;
+                    background-color: #F67600;
+                    top: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+        .s4_content{
+            display: flex;
+            gap: 32px;
+            //align-items: center;
+            position: relative;
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            .btn-slide{
+                position: absolute;
+                top: 45%;
+                transform: translateY(-50%);
+                z-index: 1;
+                &.next{
+                    right: 1rem;
+                    img{
+                        transform: rotate(0deg);
+                    }
+                }
+                &.prev{
+                    left: 1rem;
+                    img{
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+            .slider{
+                display: flex;
+                max-width: 1120px;
+                margin: 0 auto;
+                width: 100%;
+                overflow: hidden;
+                gap: 12px;
+                flex: 0 0 auto;
+                box-sizing: border-box;
+            }
 
+        }
+        .s3_btn{
+            width: var(--s3_btn-width, 20rem);
+            display: inline-flex;
+            white-space: nowrap;
+            justify-content: center;
+            text-decoration: none;
+            background-color: #FFFFFF;
+            margin: 0 auto;
+            gap: 8px;
+            border: 1px solid #000000;
+            border-radius: 99px;
+            padding: 24px 64px 24px 58px;
+            gap: 8px;
+            .txt{
+                font-size: 15px;
+                font-weight: 700;
+                color: #000;
+            }
+        }
     }
 }
 
