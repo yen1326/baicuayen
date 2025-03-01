@@ -154,11 +154,28 @@ body {
   font-weight: 700;
   padding-bottom: 20px;
 }
-.banner span {
+.banner .banner_txt {
   color: #F67600;
   font-size: 24px;
   font-weight: 500;
   font-family: "Oswald", serif;
+  position: relative;
+  display: inline-block;
+}
+.banner .banner_txt::before, .banner .banner_txt::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 2px;
+  background-color: #F67600;
+  transform: translateY(-50%);
+}
+.banner .banner_txt::before {
+  left: 46%;
+}
+.banner .banner_txt::after {
+  right: 46%;
 }
 
 .link {
@@ -446,11 +463,18 @@ footer .footer__copy {
   .banner {
     width: 90%;
   }
+  .banner .banner_txt::after {
+    right: 42%;
+  }
+  .banner .banner_txt::before {
+    left: 42%;
+  }
   .banner .br375 {
     display: none;
   }
   .link {
     padding-left: 40px;
+    padding-bottom: 48px;
   }
   .contact2 {
     display: none;

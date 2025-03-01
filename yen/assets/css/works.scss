@@ -31,6 +31,7 @@ $font-os: "Oswald", serif;
                 border-radius: 20px 20px 0 0;
                 justify-content: center;
                 padding: 20px 16px;
+                font-family: $font-os;
                 outline: none;
                 font-size: 20px;
                 align-items: center;
@@ -39,6 +40,7 @@ $font-os: "Oswald", serif;
                 transition: 0.5s;
                 img{
                     color: #F67600;
+                    padding: 12px;
                 }
                 &::before {
                     content: "";
@@ -177,6 +179,8 @@ $font-os: "Oswald", serif;
         .s2_content{
             display: flex;
             gap: 40px;
+            font-size: 15px;
+            font-weight: 400;
             .pic{
                 display: flex;
                 flex-direction: column;
@@ -378,12 +382,15 @@ $font-os: "Oswald", serif;
         gap: 48px;
         width: 90%;
         .s1{
+            .tab button{
+                font-size: 15px;
+            }
             .tabcontent{
                 .btn{
                     margin: 20px 4px;
-                    &:last-child{
-                        margin-top: 0;
-                    }
+                    // &:last-child{
+                    //     margin-top: 0 !important;
+                    // }
                 }
             }
             .items{
@@ -394,6 +401,7 @@ $font-os: "Oswald", serif;
                     .txt{
                         .t1{
                             text-align: left;
+                            font-size: 15px;
                         }
                     }
                 }
@@ -412,6 +420,61 @@ $font-os: "Oswald", serif;
                         width: 100%;
                     }
                 }
+            }
+        }
+        .s3{
+            gap: 32px;
+            padding: 40px 0 40px 0;
+            .s3_title{
+                p{
+                    font-size: 24px;
+                }
+            }
+            .s3_content{
+                .item{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    .gr_txt{
+                        width: 100%;
+                        gap: 8px;
+                        .txt1{
+                            gap: 16px;
+                        }
+                        .txt2 {
+                            color: #F67600;
+                            font-size: 15px;
+                            text-align: left;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        .txt3 {
+                            font-size: 13px;
+                            color: #333333;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            .br{
+                                display: none;
+                            }
+                        }
+                    }
+                    .pic{
+                        width: 100%;
+                    }
+                }
+            }
+            .s3_btn{
+                padding: 16px 20px;
+                width: var(--s3_btn-width, 13rem);
+            }
+        }
+        .s4{
+            .s3_btn{
+                padding: 16px 20px;
+                width: var(--s3_btn-width, 13rem);
             }
         }
     }

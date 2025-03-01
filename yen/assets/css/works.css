@@ -30,6 +30,7 @@
   border-radius: 20px 20px 0 0;
   justify-content: center;
   padding: 20px 16px;
+  font-family: "Oswald", serif;
   outline: none;
   font-size: 20px;
   align-items: center;
@@ -39,6 +40,7 @@
 }
 .main .s1 .tab button img {
   color: #F67600;
+  padding: 12px;
 }
 .main .s1 .tab button::before {
   content: "";
@@ -161,6 +163,8 @@
 .main .s2 .s2_content {
   display: flex;
   gap: 40px;
+  font-size: 15px;
+  font-weight: 400;
 }
 .main .s2 .s2_content .pic {
   display: flex;
@@ -355,11 +359,11 @@
     gap: 48px;
     width: 90%;
   }
+  .main .s1 .tab button {
+    font-size: 15px;
+  }
   .main .s1 .tabcontent .btn {
     margin: 20px 4px;
-  }
-  .main .s1 .tabcontent .btn:last-child {
-    margin-top: 0;
   }
   .main .s1 .items {
     display: grid;
@@ -368,6 +372,7 @@
   }
   .main .s1 .items .item .txt .t1 {
     text-align: left;
+    font-size: 15px;
   }
   .main .s2 {
     display: flex;
@@ -381,5 +386,54 @@
   }
   .main .s2 .s2_content .pic .pic_img {
     width: 100%;
+  }
+  .main .s3 {
+    gap: 32px;
+    padding: 40px 0 40px 0;
+  }
+  .main .s3 .s3_title p {
+    font-size: 24px;
+  }
+  .main .s3 .s3_content .item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .main .s3 .s3_content .item .gr_txt {
+    width: 100%;
+    gap: 8px;
+  }
+  .main .s3 .s3_content .item .gr_txt .txt1 {
+    gap: 16px;
+  }
+  .main .s3 .s3_content .item .gr_txt .txt2 {
+    color: #F67600;
+    font-size: 15px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .main .s3 .s3_content .item .gr_txt .txt3 {
+    font-size: 13px;
+    color: #333333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .main .s3 .s3_content .item .gr_txt .txt3 .br {
+    display: none;
+  }
+  .main .s3 .s3_content .item .pic {
+    width: 100%;
+  }
+  .main .s3 .s3_btn {
+    padding: 16px 20px;
+    width: var(--s3_btn-width, 13rem);
+  }
+  .main .s4 .s3_btn {
+    padding: 16px 20px;
+    width: var(--s3_btn-width, 13rem);
   }
 }/*# sourceMappingURL=works.css.map */
