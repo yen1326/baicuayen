@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.s4_content').slick({
+    $('.s4_content .slider').slick({
         infinite:true,
         slidesToShow:4,
         slidesToScroll:1,
@@ -7,21 +7,15 @@ $(document).ready(function(){
         nextArrow:".s4 .next",
         centerMode: false, 
         variableWidth: false,
+        mobileFirst: false,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     });
 });
 
-$(document).ready(function () {
-    console.log("jQuery Version:", jQuery.fn.jquery); // Kiểm tra jQuery có load đúng không
-    console.log("Slick Loaded:", typeof $.fn.slick); // Phải ra "function"
-
-    if (typeof $.fn.slick === "function") {
-        $(".slider").slick({
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            infinite: true,
-            arrows: true,
-        });
-    } else {
-        console.error("Slick chưa được load đúng cách!");
-    }
-});

@@ -330,9 +330,13 @@
   margin: 0 auto;
   width: 100%;
   overflow: hidden;
-  gap: 12px;
-  flex: 0 0 auto;
-  box-sizing: border-box;
+}
+.main .s4 .s4_content .slider .item-slide .image img {
+  width: 100%;
+  border-radius: 16px;
+}
+.main .s4 .s4_content .slick-slide {
+  margin: 0 10px;
 }
 .main .s4 .s3_btn {
   width: var(--s3_btn-width, 20rem);
@@ -358,6 +362,7 @@
   .main {
     gap: 48px;
     width: 90%;
+    margin-bottom: 48px;
   }
   .main .s1 .tab button {
     font-size: 15px;
@@ -431,6 +436,12 @@
   .main .s3 .s3_btn {
     padding: 16px 20px;
     width: var(--s3_btn-width, 13rem);
+  }
+  .main .s4 .s4_title p {
+    font-size: 24px;
+  }
+  .main .s4 .s4_content .slick-slide {
+    transform: scale(0.7);
   }
   .main .s4 .s3_btn {
     padding: 16px 20px;

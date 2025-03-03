@@ -320,7 +320,6 @@ $font-os: "Oswald", serif;
         .s4_content{
             display: flex;
             gap: 32px;
-            //align-items: center;
             position: relative;
             max-width: 1280px;
             width: 100%;
@@ -349,11 +348,16 @@ $font-os: "Oswald", serif;
                 margin: 0 auto;
                 width: 100%;
                 overflow: hidden;
-                gap: 12px;
-                flex: 0 0 auto;
-                box-sizing: border-box;
+                .item-slide{
+                    .image{
+                        img{
+                            width: 100%;
+                            border-radius: 16px;
+                        }
+                    }
+                }
             }
-
+            .slick-slide { margin: 0 10px; }
         }
         .s3_btn{
             width: var(--s3_btn-width, 20rem);
@@ -381,6 +385,7 @@ $font-os: "Oswald", serif;
     .main{
         gap: 48px;
         width: 90%;
+        margin-bottom: 48px;
         .s1{
             .tab button{
                 font-size: 15px;
@@ -472,6 +477,15 @@ $font-os: "Oswald", serif;
             }
         }
         .s4{
+            .s4_title p{
+                font-size: 24px;
+            }
+            .s4_content{
+                 .slick-slide { 
+                    //margin: 0 40px; 
+                    transform: scale(0.7);
+                }
+        }
             .s3_btn{
                 padding: 16px 20px;
                 width: var(--s3_btn-width, 13rem);
