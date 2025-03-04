@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
+
+$font-noto: "Noto Sans JP", serif;
+$font-dm: "DM Serif Text", serif;
+$font-os: "Oswald", serif;
+
+// Banner
+.top_banner{
+    height: 490px;
+    max-width: 1360px;
+    width: 100%;
+    margin: 0 auto;
+    background-image: url('../img/pic_banner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 24px;
+}
+
+// Slider1
+.slide1{
+    display: flex;
+    width: 100%;
+    padding: 49px 0;
+    max-width: 1280px;
+    position: relative;
+    margin: 0 auto;
+    .btn-slide{
+        position: absolute;
+        //top: 45%;
+        transform: translateY(45%);
+        z-index: 1;
+        &.next{
+            right: 1rem;
+            img{
+                transform: rotate(0deg);
+            }
+        }
+        &.prev{
+            left: 1rem;
+            img{
+                transform: rotate(0deg);
+            }
+        }
+    }
+    .slide{
+        display: flex;
+        max-width: 1120px;
+        margin: 0 auto;
+        width: 100%;
+        overflow: hidden;
+        .item-slide{
+            .image{
+                img{
+                    width: 100%;
+                    border-radius: 16px;
+                }
+            }
+        }
+    }
+    .slick-slide { margin: 0 10px; }
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+    .reason{
+        padding: 80px 0;
+        background-color: #FEF8E9;
+        border-radius: 24px;
+        max-width: 1360px;
+        width: 100%;
+        //gap: 64px;
+        margin: 0 auto;
+        .title{
+            padding-bottom: 64px;
+        }
+        .reason_content{
+            max-width: 1120px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            .content{
+                display: flex;
+                gap: 24px;
+                .item{
+                    background-color: #FFFFFF;
+                    border-radius: 16px;
+                    padding: 48px 24px 32px 24px;
+                    .item-title{
+                        display: inline-flex;
+                        font-size: 20px;
+                        font-weight: 700;
+                        span{
+                            color: #F67600;
+                        }
+                    }
+                    .item_gr{
+                        .pic img{
+                            width: 309px;
+                            height: 206px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .works{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .reason .title, .menupage .title, .works .title, .voice .title{
+        text-align: center;
+        .gray{
+            font-size: 16px;
+            font-weight: 700;
+            color: #606060;
+            line-height: 19.2px;
+            padding-bottom: 8px;
+            &::before,
+            &::after {
+                content: "\005C";
+                font-size: 18px;
+                font-weight: bold;
+                margin: 0 10px;
+                color: #606060;
+            }
+
+            &::after {
+                content: "\002F";
+            }
+        }
+        .black{
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 52px;
+            padding-bottom: 16px;
+        }
+        .orange {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 29.6px;
+            font-family: $font-os;
+            color: #F67600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        
+            &::before,
+            &::after {
+                content: "";
+                width: 12px; 
+                height: 2px; 
+                background-color: #F67600;
+                flex-shrink: 0;
+            }
+        }
+    }
+}
