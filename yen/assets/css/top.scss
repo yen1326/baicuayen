@@ -88,21 +88,37 @@ $font-os: "Oswald", serif;
                 display: flex;
                 gap: 24px;
                 .item{
+                    position: relative;
                     background-color: #FFFFFF;
                     border-radius: 16px;
                     padding: 48px 24px 32px 24px;
-                    .item-title{
-                        display: inline-flex;
+                    &::before {
+                        content: attr(data-number); // Lấy số từ data-number
+                        position: absolute;
+                        top: -36px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        font-size: 48px;
+                        font-family: $font-os;
+                        font-weight: 500;
+                        color: #F67600;
+                    }
+                    .item_title{
+                        display: flex;
                         font-size: 20px;
+                        justify-content: center;
                         font-weight: 700;
+                        padding-bottom: 32px;
                         span{
                             color: #F67600;
                         }
                     }
                     .item_gr{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 12px;
                         .pic img{
                             width: 309px;
-                            height: 206px;
                         }
                     }
                 }
@@ -115,7 +131,7 @@ $font-os: "Oswald", serif;
         gap: 40px;
     }
     
-    .reason .title, .menupage .title, .works .title, .voice .title{
+    .title{
         text-align: center;
         .gray{
             font-size: 16px;
@@ -161,6 +177,98 @@ $font-os: "Oswald", serif;
                 background-color: #F67600;
                 flex-shrink: 0;
             }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .top_banner{
+        width: 90%;
+    }
+    .slide .slide1{
+        width: 100%;
+        overflow: hidden;
+    }
+    .slick-slide{
+        margin: 0 58px !important;
+        img{
+            margin: 0 104px;
+        }
+    }
+    
+    .btn-slide{
+        &.next{
+            right: 9rem !important;
+        }
+        &.prev{
+            left: 10rem !important;
+        }
+    }
+    .main{
+        .reason{
+            padding: 48px 20px;
+            .reason_content{
+                .content{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 32px;
+                    .item{
+                        width: 90%;
+                        margin: auto;
+                        &::before {
+                            font-size: 40px;
+                            top: -31px;
+                        }
+                        .item_title{
+                            padding-bottom: 24px;
+                        }
+                        .item_gr{
+                            .txt{
+                                font-size: 14px;
+                            }
+                            .pic img{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .title{
+            width: 90%;
+            margin: auto;
+            padding: 0 20px 12px 20px;
+            .gray{
+                font-size: 14px;
+            }
+            .black{
+                font-size: 30px;
+            }
+            .orange{
+                font-size: 16px;
+            }
+        }
+        .s3_btn{
+            width: var(--s3_btn-width, 18rem) !important;
+        }
+    }
+}
+
+@media screen and (max-width: 375px){
+    .slick-slide{
+        margin: 0 58px !important;
+        img{
+            margin: 0 104px;
+        }
+    }
+    
+    .btn-slide{
+        &.next{
+            right: 1rem !important;
+        }
+        &.prev{
+            left: 1rem !important;
         }
     }
 }

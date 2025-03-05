@@ -338,7 +338,7 @@
 .main .s4 .s4_content .slick-slide {
   margin: 0 10px;
 }
-.main .reason .s3_btn, .main .menupage .s3_btn, .main .works .s3_btn, .main .voice .s3_btn {
+.main .s3_btn {
   width: var(--s3_btn-width, 20rem);
   display: inline-flex;
   white-space: nowrap;
@@ -352,7 +352,7 @@
   padding: 24px 64px 24px 58px;
   gap: 8px;
 }
-.main .reason .s3_btn .txt, .main .menupage .s3_btn .txt, .main .works .s3_btn .txt, .main .voice .s3_btn .txt {
+.main .s3_btn .txt {
   font-size: 15px;
   font-weight: 700;
   color: #000;

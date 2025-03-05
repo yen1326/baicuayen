@@ -379,7 +379,7 @@ $font-os: "Oswald", serif;
         //     }
         // }
     }
-    .reason .s3_btn, .menupage .s3_btn, .works .s3_btn, .voice .s3_btn{
+    .s3_btn{
         width: var(--s3_btn-width, 20rem);
         display: inline-flex;
         white-space: nowrap;
