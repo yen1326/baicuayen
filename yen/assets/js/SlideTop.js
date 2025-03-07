@@ -1,37 +1,71 @@
-document.addEventListener("DOMContentLoaded", function () {
-    function initSlider(sliderClass, prevBtnClass, nextBtnClass, itemsToShow) {
-        if (!$(sliderClass).length) return;
-
-        $(sliderClass).slick({
-            slidesToShow: itemsToShow,
-            slidesToScroll: 1,
-            // autoplay: true,
-            // autoplaySpeed: 1000,
-            dots: false,
-            arrows: true,
-            prevArrow: $(prevBtnClass),
-            nextArrow: $(nextBtnClass),
-            responsive: [
-                {
-                    breakpoint: 769,
-                    settings: {
-                        slidesToShow: 1,
-                        centerMode: true,
-                        adaptiveHeight: true
-                    }
-                },
-                {
-                    breakpoint: 376,
-                    settings: {
-                        slidesToShow: 1,
-                        centerMode: false,
-                        adaptiveHeight: true
-                    }
+$(document).ready(function(){
+    // Slider 1 - "お客様の声"
+    $('.slide1 .slide').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: ".slide1 .prev",
+        nextArrow: ".slide1 .next",
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2,
+                    centerMode:true
                 }
-            ]
-        });
-    }
+            },
+            {
+                breakpoint: 376,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
 
-    // Khởi tạo slider cho slide1
-    initSlider(".slide1 .slide", ".slide1 .prev", ".slide1 .next", 3);
+    // Slider 2 - "スタッフ紹介"
+    // $('.sec-slide1 .slider').slick({
+    //     infinite: true,
+    //     slidesToShow: 4,
+    //     slidesToScroll: 1,
+    //     prevArrow: ".sec-slide1 .prev",
+    //     nextArrow: ".sec-slide1 .next",
+    //     responsive: [
+    //         {
+    //             breakpoint: 769,
+    //             settings: {
+    //                 slidesToShow: 2
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 426,
+    //             settings: {
+    //                 slidesToShow: 1
+    //             }
+    //         }
+    //     ]
+    // });
+    //  Slider 3 - Chỉ hiển thị 3 slides cùng lúc
+    // $('.slide-top .slider').slick({
+    //     infinite: true,
+    //     slidesToShow: 3,  // Hiển thị 3 slide
+    //     slidesToScroll: 1,
+    //     prevArrow: ".slide-top .prev",
+    //     nextArrow: ".slide-top .next",
+    //     responsive: [
+    //         {
+    //             breakpoint: 769,
+    //             settings: {
+    //                 slidesToShow: 2   Màn hình nhỏ hơn 769px sẽ hiển thị 2 slide
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 426,
+    //             settings: {
+    //                 slidesToShow: 1   Màn hình nhỏ hơn 426px sẽ hiển thị 1 slide
+    //             }
+    //         }
+    //     ]
+    // });
 });
+
