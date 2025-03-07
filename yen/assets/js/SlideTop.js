@@ -9,14 +9,22 @@ document.addEventListener("DOMContentLoaded", function () {
             // autoplaySpeed: 1000,
             dots: false,
             arrows: true,
-            prevArrow: ".slide1 .prev",
-            nextArrow: ".slide1 .next",
+            prevArrow: $(prevBtnClass),
+            nextArrow: $(nextBtnClass),
             responsive: [
                 {
                     breakpoint: 769,
                     settings: {
                         slidesToShow: 1,
-                        centerMode: true, // Giúp căn giữa slide
+                        centerMode: true,
+                        adaptiveHeight: true
+                    }
+                },
+                {
+                    breakpoint: 376,
+                    settings: {
+                        slidesToShow: 1,
+                        centerMode: false,
                         adaptiveHeight: true
                     }
                 }
