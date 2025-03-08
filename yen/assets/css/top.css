@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap");
@@ -52,9 +53,7 @@
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-  gap: 96px;
+  gap: 96px !important;
 }
 .main .reason {
   padding: 80px 0;
@@ -113,6 +112,413 @@
 }
 .main .reason .reason_content .content .item .item_gr .pic img {
   width: 309px;
+}
+.main .menupage {
+  width: 100vw;
+  max-width: unset;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #FDE3CC;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.main .menupage .menu_content {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+.main .menupage .menu_content .list1 .title_child, .main .menupage .menu_content .list2 .title_child {
+  max-width: 1120px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.main .menupage .menu_content .list1 .title_child::before, .main .menupage .menu_content .list1 .title_child::after, .main .menupage .menu_content .list2 .title_child::before, .main .menupage .menu_content .list2 .title_child::after {
+  content: "";
+  flex: 1;
+  border-top: 3px dashed black;
+  margin: 0 10px;
+}
+.main .menupage .menu_content .list1 .title_child .above, .main .menupage .menu_content .list2 .title_child .above {
+  display: block;
+}
+.main .menupage .menu_content .list1 .title_child .above p, .main .menupage .menu_content .list2 .title_child .above p {
+  color: #606060;
+  font-size: 16px;
+  font-weight: 700;
+}
+.main .menupage .menu_content .list1 .title_child .above p::before, .main .menupage .menu_content .list1 .title_child .above p::after, .main .menupage .menu_content .list2 .title_child .above p::before, .main .menupage .menu_content .list2 .title_child .above p::after {
+  content: "\\";
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 10px;
+  color: #606060;
+}
+.main .menupage .menu_content .list1 .title_child .above p::after, .main .menupage .menu_content .list2 .title_child .above p::after {
+  content: "/";
+}
+.main .menupage .menu_content .list1 .title_child .above span, .main .menupage .menu_content .list2 .title_child .above span {
+  color: #F67600;
+}
+.main .menupage .menu_content .list1 {
+  display: flex;
+  flex-direction: column;
+  max-width: 1120px;
+  width: 100%;
+  margin: auto;
+}
+.main .menupage .menu_content .list1 .title_child .above .br {
+  display: none;
+}
+.main .menupage .menu_content .list1 .tab1 {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 48px 0 32px 0;
+}
+.main .menupage .menu_content .list1 .tab1 .item {
+  background-color: #FFFFFF;
+  padding: 40px 24px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  gap: 16px;
+}
+.main .menupage .menu_content .list1 .tab1 .item .ttl {
+  font-size: 40px;
+  font-weight: 700;
+}
+.main .menupage .menu_content .list1 .tab1 .item .t1 {
+  color: #53B328;
+  display: block;
+  position: relative;
+}
+.main .menupage .menu_content .list1 .tab1 .item .t1::before {
+  content: "地域最安値を目指す";
+  position: absolute;
+  top: -65px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 99px;
+  padding: 8px 16px 11px 16px;
+  background-color: #FFF09F;
+  border: 2px solid #000000;
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #000000;
+}
+.main .menupage .menu_content .list1 .tab1 .item .t1::after {
+  content: "";
+  position: absolute;
+  bottom: 66px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid black; /* Màu viền */
+}
+.main .menupage .menu_content .list1 .tab1 .item .t1 span {
+  content: "";
+  position: absolute;
+  bottom: 69px; /* Đưa xuống dưới */
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #FFF09F; /* Màu nền vàng */
+}
+.main .menupage .menu_content .list1 .tab1 .item .t2 {
+  color: #2585AD;
+  display: block;
+  position: relative;
+}
+.main .menupage .menu_content .list1 .tab1 .item .t2::before {
+  content: "アスベスト調査も";
+  position: absolute;
+  top: -65px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 99px;
+  padding: 8px 16px 11px 16px;
+  background-color: #FFF09F;
+  border: 2px solid #000000;
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #000000;
+}
+.main .menupage .menu_content .list1 .tab1 .item .t2::after {
+  content: "";
+  position: absolute;
+  bottom: 66px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid black; /* Màu viền */
+}
+.main .menupage .menu_content .list1 .tab1 .item .t2 span {
+  content: "";
+  position: absolute;
+  bottom: 69px; /* Đưa xuống dưới */
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #FFF09F; /* Màu nền vàng */
+}
+.main .menupage .menu_content .list1 .tab1 .item .t3 {
+  color: #A254B6;
+  display: block;
+  position: relative;
+}
+.main .menupage .menu_content .list1 .tab1 .item .t3::before {
+  content: "大きい建物もおまかせ";
+  position: absolute;
+  top: -65px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 99px;
+  padding: 8px 16px 11px 16px;
+  background-color: #FFF09F;
+  border: 2px solid #000000;
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #000000;
+}
+.main .menupage .menu_content .list1 .tab1 .item .t3::after {
+  content: "";
+  position: absolute;
+  bottom: 66px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid black; /* Màu viền */
+}
+.main .menupage .menu_content .list1 .tab1 .item .t3 span {
+  content: "";
+  position: absolute;
+  bottom: 69px; /* Đưa xuống dưới */
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #FFF09F; /* Màu nền vàng */
+}
+.main .menupage .menu_content .list1 .tab1 .item .pic img {
+  width: 100%;
+}
+.main .menupage .menu_content .list1 .tab1 .item .price {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: auto;
+  font-weight: 700;
+  color: #DD1D1D;
+}
+.main .menupage .menu_content .list1 .tab1 .item .price .pr1 {
+  align-items: baseline;
+  display: flex;
+  font-size: 20px;
+}
+.main .menupage .menu_content .list1 .tab1 .item .price .pr1 p {
+  font-size: 14px;
+}
+.main .menupage .menu_content .list1 .tab1 .item .price .pr2 {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.main .menupage .menu_content .list1 .tab1 .item .price .pr2 .pr21 {
+  font-weight: 600;
+  font-size: 48px;
+  font-family: "Oswald", serif;
+}
+.main .menupage .menu_content .list1 .tab1 .item .price .pr2 .pr22 {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: #000000;
+}
+.main .menupage .menu_content .list1 .tab1 .item .price .pr2 .pr22 span {
+  font-weight: 500;
+  font-size: 12px;
+}
+.main .menupage .menu_content .list1 .tab1 .item .price .pr2 .pr22 p {
+  font-size: 16px;
+}
+.main .menupage .menu_content .list1 .tab1 .item .txt {
+  font-weight: 400;
+  color: #606060;
+  font-size: 12px;
+}
+.main .menupage .menu_content .list1 .tab1 .item .btn {
+  width: 100%;
+  border-radius: 99px;
+  padding: 16px 24px 16px 40px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.main .menupage .menu_content .list1 .tab1 .item .btn1 {
+  background-color: #53B328;
+}
+.main .menupage .menu_content .list1 .tab1 .item .btn2 {
+  background-color: #2585AD;
+}
+.main .menupage .menu_content .list1 .tab1 .item .btn3 {
+  background-color: #A254B6;
+}
+.main .menupage .menu_content .list1 .tab2 {
+  display: flex;
+}
+.main .menupage .menu_content .list1 .tab2 .l {
+  background-color: #F89840;
+  padding: 32px;
+  border-radius: 16px 0 0 16px;
+  text-align: center;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.main .menupage .menu_content .list1 .tab2 .r {
+  background-color: #FFFFFF;
+  border-radius: 0 16px 16px 0;
+  line-height: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 32px 30px;
+}
+.main .menupage .menu_content .list1 .tab2 .r p {
+  display: flex;
+  gap: 4px;
+  background-color: #FFF09F;
+  border-radius: 99px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+}
+.main .menupage .menu_content .list1 .tab2 .r p img {
+  width: 24px;
+  height: 24px;
+}
+.main .menupage .menu_content .list2 {
+  max-width: 1120px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.main .menupage .menu_content .list2 .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.main .menupage .menu_content .list2 .grid .item {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 12px 24px 24px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.main .menupage .menu_content .list2 .grid .item .i1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.main .menupage .menu_content .list2 .grid .item .i3 {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.main .menupage .menu_content .list2 .grid .item .i3 .gr1 {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.main .menupage .menu_content .list2 .grid .item .i3 .gr1 p {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "Oswald", serif;
+  color: #DD1D1D;
+}
+.main .menupage .menu_content .list2 .grid .item .i3 .gr1 .above {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.main .menupage .menu_content .list2 .grid .item .i3 .gr1 .above span {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: left;
+}
+.main .menupage .menu_content .list2 .grid .item .i3 .gr1 .above p {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Noto Sans JP", serif;
+  color: #000000;
+}
+.main .menupage .menu_content .list2 .grid .item .i3 .gr2 {
+  display: flex;
+  flex-direction: column;
+}
+.main .menupage .menu_content .list2 .grid .item .i3 .gr2 p {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+}
+.main .menupage .menu_content .list2 .grid .item .i3 .gr2 .above {
+  display: flex;
+  align-items: center;
+}
+.main .menupage .menu_content .list2 .grid .item .i3 .gr2 .above span {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2585AD;
+}
+.main .menupage .menu_content .list2 .grid .item .i3 .gr2 .above p {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Noto Sans JP", serif;
+  color: #000000;
 }
 .main .works {
   display: flex;
@@ -317,7 +723,7 @@
     padding: 26.7px 0;
   }
   .slide1 .slick-slide {
-    transform: scale(0.7);
+    transform: scale(0.8);
   }
   .main .reason {
     padding: 48px 0px;
@@ -343,6 +749,34 @@
   }
   .main .reason .reason_content .content .item .item_gr .pic img {
     width: 100%;
+  }
+  .main .menupage .menu_content .list1 .tab1 {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .main .menupage .menu_content .list1 .tab2 {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+  .main .menupage .menu_content .list1 .tab2 .l {
+    border-radius: 16px 16px 0 0;
+    font-size: 16px;
+  }
+  .main .menupage .menu_content .list1 .tab2 .l .br {
+    display: none;
+  }
+  .main .menupage .menu_content .list1 .tab2 .r {
+    padding: 20px 16px;
+    border-radius: 0 0 16px 16px;
+  }
+  .main .menupage .menu_content .list2 .grid {
+    width: 90%;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
   }
   .main .blog {
     padding: 48px 0px;
@@ -457,6 +891,9 @@
   }
 }
 @media screen and (max-width: 376px) {
+  .slide1 .slide .slide_item img {
+    margin-left: 8px;
+  }
   .main .show1 .show1_ctn2 .item .pic img {
     width: 124px;
     height: 124px;
