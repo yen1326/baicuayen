@@ -7,7 +7,7 @@ $font-dm: "DM Serif Text", serif;
 $font-os: "Oswald", serif;
 
 // Banner
-.top_banner{
+.top_banner {
     height: 490px;
     max-width: 1360px;
     width: 100%;
@@ -15,8 +15,75 @@ $font-os: "Oswald", serif;
     background-image: url('../img/pic_banner.png');
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
     border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .pic1 {
+        position: absolute;
+        right: 30px;
+        bottom: -3px;
+        z-index: 1;
+    }
+    .group {
+        padding: 0 0 0 55px;
+        z-index: 2;
+        flex: 1;
+        .txt {
+            color: #FFFFFF;
+            font-size: 32px;
+            font-weight: 900;
+            .br{
+                display: none;
+            }
+        }
+        .pic3 img {
+            margin-left: -40px;
+        }
+        .pic4 {
+            max-width: 522px;
+            display: flex;
+            justify-content: space-between;
+            .pic41 {
+                position: relative;
+                text-align: center;
+                color: #FFFFFF;
+                font-weight: 700;
+                background-size: 162px 162px;
+                .gr {
+                    .p20 {
+                        font-size: 20.25px;
+                    }
+                    .p26 {
+                        font-size: 26.04px;
+                    }
+                    .p34 {
+                        font-size: 34.71px;
+                    }
+                }
+                @for $i from 1 through 3 {
+                    .gr#{$i} {
+                        position: absolute;
+                    }
+                }
+                .gr1 {
+                    top: 15%;
+                    left: 30%;
+                }
+                .gr2 {
+                    top: 21%;
+                    left: 20%;
+                }
+                .gr3 {
+                    top: 16%;
+                    left: 18%;
+                }
+            }
+        }
+    }
 }
+
 
 // Slider1
 .slide1{
@@ -62,7 +129,7 @@ $font-os: "Oswald", serif;
     }
     
 }
-
+//Main
 .main{
     gap: 96px !important;
     .reason{
@@ -157,7 +224,7 @@ $font-os: "Oswald", serif;
                     margin: 0 10px;
                 }
                 .above{
-                    display: block;
+                    //display: block;
                     p{
                         color: #606060;
                         font-size: 16px;
@@ -544,6 +611,17 @@ $font-os: "Oswald", serif;
         flex-direction: column;
         gap: 40px;
     }
+    .voice{
+        border-radius: 24px;
+        background-color: #FEF8E9;
+        width: 90%;
+        padding: 80px 0;
+        margin: auto;
+    }
+    .staff{
+        width: 90%;
+        margin: auto;
+    }
     .blog{
         width: 90%;
         display: flex;
@@ -739,10 +817,60 @@ $font-os: "Oswald", serif;
     }
 }
 
-
+//SP màn 768
 @media screen and (max-width: 768px){
     .top_banner{
         width: 90%;
+        height: 920px;
+        display: flex;
+        flex-direction: column;
+        .group{
+            transform: scale(1.9) translateY(200px);
+            margin-top: 50px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .txt{
+                text-align: center;
+                font-size: 20px;
+                .br{
+                    display: block;
+                }
+            }
+            .pic2 img{
+                width: 200px;
+            }
+            .pic3 img{
+                width: 343px;
+                margin-left: 0;
+            }
+            .pic4{
+                justify-content: unset;
+                gap: 6px;
+                .gr {
+                    .p20 {
+                        font-size: 12px !important;
+                    }
+                    .p26 {
+                        font-size: 15px !important;
+                    }
+                    .p34 {
+                        font-size: 20px !important;
+                    }
+                }
+                .pic41 img{
+                    width: 100px;
+                }
+            }
+        }
+        .pic1{
+            width: 90%;
+            display: flex;
+            img{
+                width: 100%;
+            }
+        }
     }
     .slide1{
         width: 100%;
@@ -784,7 +912,19 @@ $font-os: "Oswald", serif;
             }
         }
         .menupage{
+            gap: 32px;
+            padding: 48px 0;
             .menu_content{
+                .title_child{
+                    width: 90% !important;
+                    font-size: 24px !important;
+                    .above{
+                        .br{display: block !important;}
+                        p{
+                            font-size: 14px !important;
+                        }
+                    }
+                }
                 .list1{
                     .tab1{
                         width: 90%;
@@ -815,6 +955,7 @@ $font-os: "Oswald", serif;
                         width: 90%;
                         margin: auto;
                         grid-template-columns: repeat(2, 1fr);
+                        
                     }
                 }
             }
@@ -882,6 +1023,7 @@ $font-os: "Oswald", serif;
                 gap: 12px;
                 .item{
                     margin: auto;
+                    width: 700px;
                     .gr_txt{
                         .bold{
                             font-size: 15px;
@@ -935,7 +1077,20 @@ $font-os: "Oswald", serif;
     }
 }
 
+//SP màn 375
 @media screen and (max-width: 376px){
+    .top_banner{
+        height: 460px;
+        .group{
+            transform: scale(0.9);
+            margin-top: 10px;
+        }
+        .pic1{
+            width: 90%;
+            display: flex;
+            right: 17px;
+        }
+    }
     .slide1{
         .slide{
             .slide_item{
@@ -949,10 +1104,51 @@ $font-os: "Oswald", serif;
         .show1{
             .show1_ctn2{
                 .item{
+                    width: unset;
+                    .gr_txt{
+                        .color{white-space: nowrap;}
+                    }
                     .pic{
                         img{
                             width: 124px;
                             height: 124px;
+                        }
+                    }
+                }
+            }
+        }
+        .menupage{
+            .menu_content{
+                .list2{
+                    .grid{
+                        .item{
+                            width: 160px;
+                            padding: 12px 16px 20px 16px;
+                            .i1{font-size: 16px;}
+                            .i2 img{width: 100%;}
+                            .i3{
+                                white-space: nowrap;
+                                gap: 8px;
+                                transform: scale(0.8);
+                                .gr1{
+                                    p{
+                                        font-size: 32px;
+                                        .above{
+                                            font-size: 10px;
+                                            p{font-size: 13px;}
+                                        }
+                                    }
+                                }
+                                .gr2{
+                                    p{
+                                        font-size: 10px;
+                                    }
+                                    .above{
+                                        span{font-size: 16px;}
+                                        p{font-size: 11px;}
+                                    }
+                                }
+                            }
                         }
                     }
                 }
